@@ -37,7 +37,14 @@ MooseSays("I really am enthusiastic");
 
 // As a question
 bool isTrue = MooseAsks("Is Canada real?");
-Console.WriteLine(isTrue);
+if (isTrue)
+{
+    MooseSays("Really? It seems very unlikely."); //Uses MooseSays to input the string in the message area
+}
+else
+{
+    MooseSays("I  K N E W  I T !!!");
+}
 
 void MooseSays(string message)
 {
