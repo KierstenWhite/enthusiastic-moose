@@ -1,12 +1,5 @@
 ﻿using System;
 
-
-/* 
-
-    Boolean with the assigned variable name MooseAsks (string? question?) 
-    console.log the question and (Y/N):
-
-*/
 bool MooseAsks(string question)
 {
     Console.Write($"{question} (Y/N): "); //Print in the console whatever is declared as question and then (Y/N):
@@ -31,11 +24,19 @@ bool MooseAsks(string question)
 Console.WriteLine("Welcome to the Enthusiastic Moose Simulator!");
 Console.WriteLine("--------------------------------------------");
 Console.WriteLine();
+
 // Let the moose speak!
 MooseSays("H I, I'M  E N T H U S I A S T I C !");
 MooseSays("I really am enthusiastic");
 
 // As a question
+CanadaQuestion();
+EnthusiasticQuestion();
+LoveCSharpQuestion();
+SecretQuestion();
+
+void CanadaQuestion()
+{
 bool isTrue = MooseAsks("Is Canada real?");
 if (isTrue)
 {
@@ -44,6 +45,46 @@ if (isTrue)
 else
 {
     MooseSays("I  K N E W  I T !!!");
+}
+}
+
+void EnthusiasticQuestion()
+{
+    bool isEnthusiastic = MooseAsks("Are you enthusiastic?");
+    if (isEnthusiastic)
+    {
+        MooseSays("Yay!");
+    }
+    else
+    {
+        MooseSays("You should try it!");
+    }
+}
+
+void LoveCSharpQuestion()
+{
+    bool doesLoveCSharp = MooseAsks("Do you love C# yet?");
+    if (doesLoveCSharp)
+    {
+        MooseSays("Good job sucking up to your instructor!");
+    }
+    else
+    {
+        MooseSays("You will...oh, yes, you will...");
+    }
+}
+
+void SecretQuestion()
+{
+    bool wantsSecret = MooseAsks("Do you want to know a secret?");
+    if (wantsSecret)
+    {
+        MooseSays("ME TOO!!!! I love secrets...tell me one!");
+    }
+    else
+    {
+        MooseSays("Oh, no...secrets are the best, I love to share them!");
+    }
 }
 
 void MooseSays(string message)
